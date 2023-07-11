@@ -1,16 +1,21 @@
+// === DO NOT EDIT THIS REGION ===
+// Read the comments to understand how the program is structured.
+
 // Prompt the user for a list of integers separated by commas.
-const numberString = prompt(
+const userInputString = prompt(
   "Please enter some integers separated by commas.",
   "1,2,3,4,5"
 );
 
 // Split the string of numbers into an array of strings.
-const numberStrings = numberString.split(",");
+const stringArray = userInputString.split(",");
 
 // Convert the array of strings into an array of numbers.
 const numbers = [];
-for (const str of numberStrings) {
-  numbers.push(parseInt(str));
+for (let i = 0; i < stringArray.length; i++) {
+  const str = stringArray[i];
+  const number = parseInt(str);
+  numbers.push(number);
 }
 
 // Peform some calculations on the numbers.
@@ -24,6 +29,7 @@ console.log(`The range of your numbers is ${getRange(numbers)}.`);
 console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
 console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 
+// === EDIT THE CODE BELOW ===
 // Complete the functions below to make the program work!
 
 /**
